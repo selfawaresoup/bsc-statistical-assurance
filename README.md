@@ -7,6 +7,10 @@ Psychology bachelor's thesis regarding statistical asssurance for estimating sam
 
 ## Rendering documents
 
+On the `main` branch documents are rendered automatically by a [Github action](.github/workflows/render-documents.yaml) when pushed to Github.
+
+They can also be rendered locally:
+
 ### Incremental render
 
 ```
