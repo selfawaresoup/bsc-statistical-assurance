@@ -1,0 +1,22 @@
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  render-documents:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+          run: |
+            apk add make
+            make all
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            render/expose.pdf
+            render/thesis.pdf
+          make_latest: true

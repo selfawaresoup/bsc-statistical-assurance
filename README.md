@@ -1,6 +1,9 @@
-# BSc thesis by Esther Weidauer
+# BSc thesis: statistical assurance
 
-Psychology BSc thesis regarding statistical asssurance for estimating sample sizes and power
+Psychology bachelor's thesis regarding statistical asssurance for estimating sample sizes and power
+
+- author: [Esther Weidauer](https://www.selfawaresoup.com)
+- [latest rendered documents](https://github.com/selfawaresoup/bsc-statistical-assurance/releases/latest)
 
 ## Rendering documents
 

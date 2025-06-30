@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+
+% begin base-directives
+	% internationalization, typographic rules for many languages
+	\usepackage[english]{babel}
+	
+	% date handling and formatting
+	\usepackage[de-DE]{datetime2}
+	
+	% fixes some encoding issues
+	% https://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
+	\usepackage[T1]{fontenc} % fixes some encoding issues
+	
+	% Latin Modern font family
+	\usepackage{lmodern}
+	
+	% provides \say{} macro for simple quotes
+	\usepackage{dirtytalk}
+	
+	% provides \enquote{} for locale-matched quotes
+	\usepackage{csquotes}
+	
+	% prettier table rendering
+	\usepackage{booktabs}
+	
+	% flexible table environment with auto-expanding X columns
+	\usepackage{tabularx}
+	
+	% Micro-typographic improvements
+	\usepackage[final]{microtype}
+% end base-directives
+
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+
+\usepackage[hidelinks]{hyperref}
+
+\title{Thesis, title TBD}
+\author{Esther Weidauer}
+\date{\DTMdate{2025-06-30}}
+
+\begin{document}
+
+\maketitle
+
+\section{Citing some articles}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Morbi tincidunt ornare massa eget egestas. Nam aliquam sem et tortor consequat id porta nibh venenatis. Massa id neque aliquam vestibulum morbi blandit cursus. Enim tortor at auctor urna nunc id cursus. In hac habitasse platea dictumst.
+
+\begin{quote}
+	Eu tincidunt tortor aliquam nulla facilisi cras fermentum. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Volutpat maecenas volutpat blandit aliquam etiam. Convallis tellus id interdum velit laoreet id donec. Dolor purus non enim praesent elementum.
+\end{quote}
+
+Eros donec ac odio tempor orci dapibus ultrices. Id diam vel quam elementum pulvinar. Ac tortor vitae purus faucibus ornare. Quam lacus suspendisse faucibus interdum. Natoque penatibus et magnis dis parturient montes. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Nisl rhoncus mattis rhoncus urna neque viverra justo \autocite{chen_statistical_2017}.
+
+\bigskip
+
+Aliquam sem fringilla ut morbi tincidunt. Nec ultrices dui sapien eget mi proin sed libero. Sit amet mattis vulputate enim nulla. Quis enim lobortis scelerisque fermentum. Fusce id velit ut tortor pretium viverra suspendisse. Quam elementum pulvinar etiam non quam. Massa sapien faucibus et molestie. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Netus et malesuada fames ac turpis egestas maecenas pharetra. At urna condimentum mattis pellentesque id nibh tortor. Odio morbi quis commodo odio aenean sed. Id faucibus nisl tincidunt eget \autocite{anderson_sample-size_2017}.
+
+\section{Citing some more}
+
+Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Quam adipiscing vitae proin sagittis nisl rhoncus mattis. Nec feugiat in fermentum posuere urna nec. Leo duis ut diam quam nulla. Ut sem nulla pharetra diam sit amet. Velit scelerisque in dictum non consectetur a erat nam. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Nunc sed id semper risus in hendrerit. Scelerisque felis imperdiet proin fermentum leo vel. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Sit amet cursus sit amet dictum sit. Magnis dis parturient montes nascetur. Tristique senectus et netus et malesuada fames ac. Velit scelerisque in dictum non consectetur \autocite{chuangstein_sample_2006}.
+
+\printbibliography{}
+
+\end{document}
