@@ -3,64 +3,67 @@
 % begin base-directives
 	% internationalization, typographic rules for many languages
 	\usepackage[english]{babel}
-	
+
 	% date handling and formatting
 	\usepackage[de-DE]{datetime2}
-	
+
 	% fixes some encoding issues
 	% https://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
 	\usepackage[T1]{fontenc} % fixes some encoding issues
-	
+
 	% Latin Modern font family
 	\usepackage{lmodern}
-	
+
 	% provides \say{} macro for simple quotes
 	\usepackage{dirtytalk}
-	
+
 	% provides \enquote{} for locale-matched quotes
 	\usepackage{csquotes}
-	
+
 	% prettier table rendering
 	\usepackage{booktabs}
-	
+
 	% flexible table environment with auto-expanding X columns
 	\usepackage{tabularx}
-	
+
 	% Micro-typographic improvements
 	\usepackage[final]{microtype}
 % end base-directives
 
 \usepackage[style=apa,backend=biber]{biblatex}
-\addbibresource{bibliography.bib}
+\addbibresource{../bibliography.bib}
 
 \usepackage[hidelinks]{hyperref}
 
-\title{Expose, title TBD}
+\title{Exposé: \\ Statistical Assurance in Psychology Research}
 \author{Esther Weidauer}
-\date{\DTMdate{2025-06-30}}
+\date{\today}
 
 
 \begin{document}
 
 \maketitle
 
-\section{Citing some articles}
+\section{Abstract}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Morbi tincidunt ornare massa eget egestas. Nam aliquam sem et tortor consequat id porta nibh venenatis. Massa id neque aliquam vestibulum morbi blandit cursus. Enim tortor at auctor urna nunc id cursus. In hac habitasse platea dictumst.
+In confirmatory psychological trials statistical power analysis is often used to estimate the sample size necessary to find a given effect. The relevant effect size can be derived e.g. from existing publications or exploratory research but only represents one possible effect size from what is really a probability distribution of effect sizes over many repeated trials. Power analysis based on a single value for effect size therefore introduces potential errors that can lead to overpowered designs that use more resources than needed, or underpowered designs that draw flawed conclusions from insuffiecient empirical data. Statistical assurance offers an alternative approach that takes into account the probabilistic nature of the effect size and can enable researchers to design more efficient trials and more reliable results \autocite{ohagan_bayesian_2001}.
 
-\begin{quote}
-	Eu tincidunt tortor aliquam nulla facilisi cras fermentum. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Volutpat maecenas volutpat blandit aliquam etiam. Convallis tellus id interdum velit laoreet id donec. Dolor purus non enim praesent elementum.
-\end{quote}
+\section{Introduction}
 
-Eros donec ac odio tempor orci dapibus ultrices. Id diam vel quam elementum pulvinar. Ac tortor vitae purus faucibus ornare. Quam lacus suspendisse faucibus interdum. Natoque penatibus et magnis dis parturient montes. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Nisl rhoncus mattis rhoncus urna neque viverra justo \autocite{chen_statistical_2017}.
+\subsection{Flaws in power analysis}
 
-\bigskip
+The basic goal of a confirmatory trial is to reject the nullhypothesis and accept an alternative hypothesis which means to find a statistically significant effect in the observed sample, one that is sufficiently improbable to be the result of only random variance. The threshold for this sufficient improbability is the $\alpha$ error rate, commonly set at 5\%. it is the probability of falsely rejecting the null hypothesis, meaning to randomly find a sample that appears to show the examined effect even thoug the effect does in fact not exist.
 
-Aliquam sem fringilla ut morbi tincidunt. Nec ultrices dui sapien eget mi proin sed libero. Sit amet mattis vulputate enim nulla. Quis enim lobortis scelerisque fermentum. Fusce id velit ut tortor pretium viverra suspendisse. Quam elementum pulvinar etiam non quam. Massa sapien faucibus et molestie. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Netus et malesuada fames ac turpis egestas maecenas pharetra. At urna condimentum mattis pellentesque id nibh tortor. Odio morbi quis commodo odio aenean sed. Id faucibus nisl tincidunt eget \autocite{anderson_sample-size_2017}.
+In order to accept an alternative hypothesis the distribution of samples must have a low enough standard error so that it becomes sufficiently unlikely to find a sample that does not show the examined effect even though the effect does exist. For this purpose the $\beta$ error rate is introduced. Statistical power is then defined as $1-\beta$ and is the probability of correctly accepting the alternative hypothesis. Commonly used values are 10 to 20\% for $\beta$ and 80 to 90\% repectively for statistical power.
 
-\section{Citing some more}
+Based on the parameters effect size, standard error, $\alpha$ error rate, and $\beta$ error rate a required minimum sample size can be estimated using \emph{a priori} power analysis. The result of this calculation is an estimated sample size that satifies the condition of achieving the desired statistical power \autocite[262--264]{eid_statistik_2017_poweranalysis}.
 
-Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Quam adipiscing vitae proin sagittis nisl rhoncus mattis. Nec feugiat in fermentum posuere urna nec. Leo duis ut diam quam nulla. Ut sem nulla pharetra diam sit amet. Velit scelerisque in dictum non consectetur a erat nam. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Nunc sed id semper risus in hendrerit. Scelerisque felis imperdiet proin fermentum leo vel. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Sit amet cursus sit amet dictum sit. Magnis dis parturient montes nascetur. Tristique senectus et netus et malesuada fames ac. Velit scelerisque in dictum non consectetur \autocite{chuangstein_sample_2006}.
+A problem with this aproach is that the effect size is not known but estimated based on prior research or theoretical models. An exploratory trial for example may yield a certain value for the effect size but if that exploratory trial were to be repeated, the result may be different. The effect size is not a fixed value but a probabilistic one following a probility distribution.
+An estimation of required sample size that does not take this variance of effect sizes into account will introduce errors that lead to an over or underpowered trial. An overpowered design can lead to higher cost than is really required and an underpowered trial can lead to incorrect conclusions based on lacking empirical data.
+
+\subsection{Statistical assurance}
+
+Statistical assurance is an alternative approach to sample size calculation that takes into account that effect sizes follow probability distributions. While statistical power is a conditional probability of rejecting the null hypothesis and is conditioned on an unknown effect size. statistical assurance is a Bayesian concept defined as an unconditional probability of rejecting the null hypothesis based on the prior probability distribution of the unknown effect size \autocite{chen_statistical_2017}.
 
 \printbibliography{}
 
