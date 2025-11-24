@@ -56,7 +56,7 @@ The basic goal of a confirmatory trial is to reject the nullhypothesis and accep
 
 In order to accept an alternative hypothesis the distribution of samples must have a low enough standard error so that it becomes sufficiently unlikely to find a sample that does not show the examined effect even though the effect does exist. For this purpose the $\beta$ error rate is introduced. Statistical power is then defined as $1-\beta$ and is the probability of correctly accepting the alternative hypothesis. Commonly used values are 10 to 20\% for $\beta$ and 80 to 90\% repectively for statistical power.
 
-Based on the parameters effect size, standard error, $\alpha$ error rate, and $\beta$ error rate a required minimum sample size can be estimated using \emph{a priori} power analysis. The result of this calculation is an estimated sample size that satifies the condition of achieving the desired statistical power \autocite[262--264]{eid_statistik_2017_poweranalysis}.
+Based on the parameters effect size, standard error, $\alpha$ error rate, and $\beta$ error rate a required minimum sample size can be estimated using \emph{a priori} power analysis. The result of this calculation is an estimated sample size that satifies the condition of achieving the desired statistical power \autocite[262--264]{eid_statistik_2017}.
 
 A problem with this aproach is that the effect size is not known but estimated based on prior research or theoretical models. An exploratory trial for example may yield a certain value for the effect size but if that exploratory trial were to be repeated, the result may be different. The effect size is not a fixed value but a probabilistic one following a probility distribution.
 An estimation of required sample size that does not take this variance of effect sizes into account will introduce errors that lead to an over or underpowered trial. An overpowered design can lead to higher cost than is really required and an underpowered trial can lead to incorrect conclusions based on lacking empirical data.
@@ -64,6 +64,57 @@ An estimation of required sample size that does not take this variance of effect
 \subsection{Statistical assurance}
 
 Statistical assurance, introduced by \citeauthor{ohagan_bayesian_2001} \parencite*{ohagan_bayesian_2001}, is an alternative approach to sample size calculation that takes into account that effect sizes follow probability distributions. While statistical power is a conditional probability of rejecting the null hypothesis and is conditioned on an unknown effect size. statistical assurance is a Bayesian concept defined as an unconditional probability of rejecting the null hypothesis based on the prior probability distribution of the unknown effect size \autocite{chen_statistical_2017}.
+
+\section{Existing work}
+
+Preliminary literature research has yielded several publications on the subject on statistical assurance as an alternative to statistical power and the general comparison of frequentist and Bayesian statistics:
+
+\begin{itemize}
+	\item \citetitle{ohagan_bayesian_2001} \\
+	      \autocite{ohagan_bayesian_2001}
+	\item \citetitle{chen_statistical_2017} \\
+	      \autocite{chen_statistical_2017}
+	\item \citetitle{chuangstein_sample_2006} \\
+	      \autocite{chuangstein_sample_2006}
+	\item \citetitle{fornacon-wood_understanding_2022} \\
+	      \autocite{fornacon-wood_understanding_2022}
+\end{itemize}
+
+\noindent As a reference for frequentist methods the book \citetitle{eid_statistik_2017} \autocite{eid_statistik_2017} is used.
+
+\section{Goals and Methods}
+
+\section{Outline}
+
+\begin{enumerate}
+	\item Abstract
+
+	      Very short overview of the topic
+
+	\item Introduction
+
+	      Recap of frequentist power analysis and its problems, introduction to assurance and Bayesian statistics
+
+	      Advantages of using assurance in psychological trials
+
+	\item Examples
+
+	      Demostrating assurance using tests that are commonly used in psychological research, e.g. t-test and linear regression
+
+	\item Software
+
+	      Documenation of the software tool for using assurance in planning sample sizes
+
+	\item Discussion
+
+	      Verdict about assurance in  psychological trials.
+
+	      Potential for further research.
+
+	\item References
+\end{enumerate}
+
+\section{Schedule}
 
 \printbibliography{}
 
